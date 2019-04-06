@@ -18,7 +18,6 @@ public class UserDAO {
     private Connection connection = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
-    private boolean flag = false;
 
     public UserDAO() {
         try {
@@ -32,16 +31,43 @@ public class UserDAO {
         }
     }
 
-    public User newUser(User user) {
-        return null;
+    public void newUser(User user) {
+        try {
+            resultSet.moveToInsertRow();
+            resultSet.updateInt("ID", user.getId());
+            resultSet.updateString("First_Name", user.getFirstName());
+            resultSet.updateString("Mid_Name", user.getMidName());
+            resultSet.updateString("Last_Name", user.getLastName());
+            resultSet.updateString("Email", user.getEmail());
+            resultSet.updateInt("Phone", user.getPhone());
+            resultSet.insertRow();
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
-    public User updateUser() {
-        return null;
+    public void updateUser(User user) {
+        try {
+            preparedStatement = connection.prepareStatement("UPDATE user SET "
+                    + "`First_Name` = '" + user.getId() + "', "
+                    + "`Mid_Name` = '" + user.getMidName() + "', "
+                    + "`Last_Name` = '" + user.getLastName() + "', "
+                    + "`Email` = '" + user.getEmail() + "', "
+                    + "`Phone` = '" + user.getPhone() + "' "
+                    + "WHERE (`ID` = '" + user.getId() + "');");
+            int isUpdate = preparedStatement.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }
 
-    public User deleteUser() {
-        return null;
+    public void deleteUser() {
+        try {
+            resultSet.deleteRow();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
     public User firstUser() {
