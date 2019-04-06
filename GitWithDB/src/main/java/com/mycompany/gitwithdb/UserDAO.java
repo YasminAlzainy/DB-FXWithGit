@@ -19,11 +19,9 @@ public class UserDAO {
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
     private boolean flag = false;
-    private User user;
 
     public UserDAO() {
         try {
-            user = new User();
             dataSource = DBProperties.getMySQLDataSource();
             connection = dataSource.getConnection();
             String query = "select * from user";
@@ -34,7 +32,7 @@ public class UserDAO {
         }
     }
 
-    public User newUser() {
+    public User newUser(User user) {
         return null;
     }
 
@@ -47,19 +45,75 @@ public class UserDAO {
     }
 
     public User firstUser() {
-        return null;
+        User user = null;
+        try {
+            if (resultSet.first()) {
+                user = new User();
+                user.setId(resultSet.getInt("ID"));
+                user.setFirstName(resultSet.getString("First_Name"));
+                user.setMidName(resultSet.getString("Mid_Name"));
+                user.setLastName(resultSet.getString("Last_Name"));
+                user.setEmail(resultSet.getString("Email"));
+                user.setPhone(resultSet.getInt("Phone"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return user;
     }
 
     public User lastUser() {
-        return null;
+        User user = null;
+        try {
+            if (resultSet.last()) {
+                user = new User();
+                user.setId(resultSet.getInt("ID"));
+                user.setFirstName(resultSet.getString("First_Name"));
+                user.setMidName(resultSet.getString("Mid_Name"));
+                user.setLastName(resultSet.getString("Last_Name"));
+                user.setEmail(resultSet.getString("Email"));
+                user.setPhone(resultSet.getInt("Phone"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return user;
     }
 
     public User prevUser() {
-        return null;
+        User user = null;
+        try {
+            if (resultSet.previous()) {
+                user = new User();
+                user.setId(resultSet.getInt("ID"));
+                user.setFirstName(resultSet.getString("First_Name"));
+                user.setMidName(resultSet.getString("Mid_Name"));
+                user.setLastName(resultSet.getString("Last_Name"));
+                user.setEmail(resultSet.getString("Email"));
+                user.setPhone(resultSet.getInt("Phone"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return user;
     }
 
     public User nextUser() {
-        return null;
+        User user = null;
+        try {
+            if (resultSet.next()) {
+                user = new User();
+                user.setId(resultSet.getInt("ID"));
+                user.setFirstName(resultSet.getString("First_Name"));
+                user.setMidName(resultSet.getString("Mid_Name"));
+                user.setLastName(resultSet.getString("Last_Name"));
+                user.setEmail(resultSet.getString("Email"));
+                user.setPhone(resultSet.getInt("Phone"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return user;
     }
 
 }

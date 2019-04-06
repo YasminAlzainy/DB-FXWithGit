@@ -8,26 +8,26 @@ import javafx.scene.layout.AnchorPane;
 
 public class GUIBase extends SplitPane {
 
-    protected final AnchorPane anchorPane;
-    protected final Label idlabel;
-    protected final Label fnamelabel;
-    protected final Label mnamelabel;
-    protected final Label lnamelabel;
-    protected final Label emaillabel;
-    protected final Label phonelabel;
-    protected final TextField idtxtfield;
-    protected final TextField fnametxtfield;
-    protected final TextField mnametxtfield;
-    protected final TextField lnametxtfield;
-    protected final TextField emailtxtfield;
-    protected final TextField phonetxtfield;
-    protected final AnchorPane anchorPane0;
-    protected final Button newbtn;
-    protected final Button updatebtn;
-    protected final Button deletebtn;
-    protected final Button firstbtn;
-    protected final Button lastbtn;
-    protected final Button clearbtn;
+    public final AnchorPane anchorPane;
+    public final Label idlabel;
+    public final Label fnamelabel;
+    public final Label mnamelabel;
+    public final Label lnamelabel;
+    public final Label emaillabel;
+    public final Label phonelabel;
+    public final TextField idtxtfield;
+    public final TextField fnametxtfield;
+    public final TextField mnametxtfield;
+    public final TextField lnametxtfield;
+    public final TextField emailtxtfield;
+    public final TextField phonetxtfield;
+    public final AnchorPane anchorPane0;
+    public final Button newbtn;
+    public final Button updatebtn;
+    public final Button deletebtn;
+    public final Button firstbtn;
+    public final Button lastbtn;
+    public final Button clearbtn;
 
     public GUIBase() {
 
