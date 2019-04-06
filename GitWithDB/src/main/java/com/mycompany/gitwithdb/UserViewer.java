@@ -20,10 +20,10 @@ public class UserViewer extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        UserDAO user = new UserDAO();
+       
         //Yasmin Code
         //Noran Code 
-
+ UserDAO user = new UserDAO();
         GUIBase root = new GUIBase();
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("Hello World!");
