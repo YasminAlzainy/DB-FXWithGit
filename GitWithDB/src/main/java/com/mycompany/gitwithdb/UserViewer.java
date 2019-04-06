@@ -20,12 +20,9 @@ public class UserViewer extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
+        UserDAO user = new UserDAO();
         //Yasmin Code
         //Noran Code 
-        int personID;
-        boolean insertFlag = false;
-        String firstName, middleName, lastName, email, phone;
 
         GUIBase root = new GUIBase();
         Scene scene = new Scene(root, 600, 400);
@@ -33,9 +30,9 @@ public class UserViewer extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        root.firstbutton.setOnAction((event) -> {
-            UserDAO k = new UserDAO();
-            User firstUser = k.firstUser();
+        root.clearbutton.setOnAction((event) -> {
+
+            User firstUser = user.firstUser();
             root.idtxtfield.clear();
             root.fnametxtfield.clear();
             root.mnametxtfield.clear();
@@ -50,6 +47,24 @@ public class UserViewer extends Application {
             firstUser.getId();
 
         });
+        
+     /*   root.deletebutton.setOnAction((event) -> {
+
+            User dUser = user.deleteUser();
+            root.idtxtfield.clear();
+            root.fnametxtfield.clear();
+            root.mnametxtfield.clear();
+            root.lnametxtfield.clear();
+            root.emailtxtfield.clear();
+            root.phonetxtfield.clear();
+            dUser.getFirstName();
+            dUser.getEmail();
+           dUser.getLastName();
+            dUser.getMidName();
+           dUser.getPhone();
+           dUser.getId();
+
+        });*/
 
         /*  root.newbtn.setOnAction((event) -> {
             UserDAO k = new UserDAO();
@@ -68,20 +83,45 @@ public class UserViewer extends Application {
             newUser.getId();
 
         });*/
-        root.lastbtn.setOnAction((event) -> {
+        root.lastbutton.setOnAction((event) -> {
 
-            UserDAO k = new UserDAO();
-            User lastUser = k.lastUser();
-            lastUser.getId();
-            lastUser.getFirstName();
-            lastUser.getMidName();
-            lastUser.getLastName();
-            lastUser.getEmail();
-            lastUser.getPhone();
+            User lastUser = user.lastUser();
+            root.idtxtfield.setText(""+lastUser.getId());
+            root.fnametxtfield.setText(""+lastUser.getFirstName());
+            root.mnametxtfield.setText(""+lastUser.getMidName());
+            root.lnametxtfield.setText(""+ lastUser.getLastName());
+            root.emailtxtfield.setText(""+ lastUser.getEmail());
+            root.phonetxtfield.setText(""+lastUser.getPhone());
 
         });
-        
-      
+
+        root.nextbutton.setOnAction((event) -> {
+
+            User nextUser = user.nextUser();
+          
+            root.idtxtfield.setText(""+nextUser.getId());
+            root.fnametxtfield.setText(""+nextUser.getFirstName());
+            root.mnametxtfield.setText(""+nextUser.getMidName());
+            root.lnametxtfield.setText(""+nextUser.getLastName());
+            root.emailtxtfield.setText(""+ nextUser.getEmail());
+            root.phonetxtfield.setText(""+nextUser.getPhone());
+
+
+        });
+
+        root.previousbutton.setOnAction((event) -> {
+
+            User prevUser = user.prevUser();
+          root.idtxtfield.setText(""+prevUser.getId());
+            root.fnametxtfield.setText(""+prevUser.getFirstName());
+            root.mnametxtfield.setText(""+prevUser.getMidName());
+            root.lnametxtfield.setText(""+prevUser.getLastName());
+            root.emailtxtfield.setText(""+ prevUser.getEmail());
+            root.phonetxtfield.setText(""+prevUser.getPhone());
+
+
+        });
+
         /*  Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
