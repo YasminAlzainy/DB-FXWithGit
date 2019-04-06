@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.8165829145728644" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="598.0">
+         <children>
+            <Label layoutX="29.0" layoutY="30.0" text="ID" />
+            <Label layoutX="21.0" layoutY="68.0" text="First Name" />
+            <Label layoutX="21.0" layoutY="103.0" text="Mid Name" />
+            <Label layoutX="21.0" layoutY="136.0" text="Last Name" />
+            <Label layoutX="21.0" layoutY="172.0" text="Email" />
+            <Label layoutX="21.0" layoutY="209.0" text="Phone" />
+            <TextField id="txtid" layoutX="91.0" layoutY="26.0" />
+            <TextField id="fnameid" layoutX="91.0" layoutY="56.0" />
+            <TextField id="mnameid" layoutX="91.0" layoutY="99.0" />
+            <TextField id="lnameid" layoutX="91.0" layoutY="132.0" />
+            <TextField id="emailid" layoutX="91.0" layoutY="168.0" />
+            <TextField id="phoneid" layoutX="91.0" layoutY="205.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button id="newid" layoutX="85.0" layoutY="14.0" mnemonicParsing="false" text="New" />
+            <Button id="updateid" layoutX="156.0" layoutY="14.0" mnemonicParsing="false" text="Update" />
+            <Button id="deleteid" layoutX="230.0" layoutY="14.0" mnemonicParsing="false" text="Delete" />
+            <Button id="firstid" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" text="First" />
+            <Button id="lastid" layoutX="363.0" layoutY="14.0" mnemonicParsing="false" text="Last" />
+            <Button id="clearid" layoutX="428.0" layoutY="14.0" mnemonicParsing="false" text="Clear" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
