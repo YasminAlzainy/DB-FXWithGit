@@ -6,51 +6,55 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class GUIBase extends SplitPane {
+public  class GUIBase extends SplitPane {
 
     public final AnchorPane anchorPane;
-    public final Label idlabel;
-    public final Label fnamelabel;
-    public final Label mnamelabel;
-    public final Label lnamelabel;
-    public final Label emaillabel;
-    public final Label phonelabel;
-    public final TextField idtxtfield;
-    public final TextField fnametxtfield;
-    public final TextField mnametxtfield;
+    public final Label idl;
+    public final Label fnamel;
+    public final Label mnamel;
+    public final Label lnamel;
+  public final Label emaill;
+    public final Label phonel;
     public final TextField lnametxtfield;
+    public final TextField fnametxtfield;
+    public final TextField idtxtfield;
     public final TextField emailtxtfield;
     public final TextField phonetxtfield;
+    public final TextField mnametxtfield;
     public final AnchorPane anchorPane0;
-    public final Button newbtn;
-    public final Button updatebtn;
-    public final Button deletebtn;
-    public final Button firstbtn;
-    public final Button lastbtn;
-    public final Button clearbtn;
+    public final Button idbutton;
+    public final Button updatebutton;
+    public final Button deletebutton;
+    public final Button firstbutton;
+    public final Button lastbutton;
+    public final Button clearbutton;
+    public final Button nextbutton;
+    public final Button previousbutton;
 
     public GUIBase() {
 
         anchorPane = new AnchorPane();
-        idlabel = new Label();
-        fnamelabel = new Label();
-        mnamelabel = new Label();
-        lnamelabel = new Label();
-        emaillabel = new Label();
-        phonelabel = new Label();
-        idtxtfield = new TextField();
-        fnametxtfield = new TextField();
-        mnametxtfield = new TextField();
+        idl = new Label();
+        fnamel = new Label();
+        mnamel = new Label();
+        lnamel = new Label();
+        emaill = new Label();
+        phonel = new Label();
         lnametxtfield = new TextField();
+        fnametxtfield = new TextField();
+        idtxtfield = new TextField();
         emailtxtfield = new TextField();
         phonetxtfield = new TextField();
+        mnametxtfield = new TextField();
         anchorPane0 = new AnchorPane();
-        newbtn = new Button();
-        updatebtn = new Button();
-        deletebtn = new Button();
-        firstbtn = new Button();
-        lastbtn = new Button();
-        clearbtn = new Button();
+        idbutton = new Button();
+        updatebutton = new Button();
+        deletebutton = new Button();
+        firstbutton = new Button();
+        lastbutton = new Button();
+        clearbutton = new Button();
+        nextbutton = new Button();
+        previousbutton = new Button();
 
         setDividerPositions(0.8165829145728644);
         setMaxHeight(USE_PREF_SIZE);
@@ -61,119 +65,134 @@ public class GUIBase extends SplitPane {
         setPrefHeight(400.0);
         setPrefWidth(600.0);
 
+        anchorPane.setId("previousbtn");
         anchorPane.setMinHeight(0.0);
         anchorPane.setMinWidth(0.0);
         anchorPane.setPrefHeight(244.0);
         anchorPane.setPrefWidth(598.0);
 
-        idlabel.setLayoutX(29.0);
-        idlabel.setLayoutY(30.0);
-        idlabel.setText("ID");
+        idl.setLayoutX(29.0);
+        idl.setLayoutY(30.0);
+        idl.setText("ID");
 
-        fnamelabel.setLayoutX(21.0);
-        fnamelabel.setLayoutY(68.0);
-        fnamelabel.setText("First Name");
+        fnamel.setLayoutX(21.0);
+        fnamel.setLayoutY(68.0);
+        fnamel.setText("First Name");
 
-        mnamelabel.setLayoutX(21.0);
-        mnamelabel.setLayoutY(103.0);
-        mnamelabel.setText("Mid Name");
+        mnamel.setLayoutX(21.0);
+        mnamel.setLayoutY(103.0);
+        mnamel.setText("Mid Name");
 
-        lnamelabel.setLayoutX(21.0);
-        lnamelabel.setLayoutY(136.0);
-        lnamelabel.setText("Last Name");
+        lnamel.setLayoutX(21.0);
+        lnamel.setLayoutY(136.0);
+        lnamel.setText("Last Name");
 
-        emaillabel.setLayoutX(21.0);
-        emaillabel.setLayoutY(172.0);
-        emaillabel.setText("Email");
+        emaill.setLayoutX(21.0);
+        emaill.setLayoutY(172.0);
+        emaill.setText("Email");
 
-        phonelabel.setLayoutX(21.0);
-        phonelabel.setLayoutY(209.0);
-        phonelabel.setText("Phone");
+        phonel.setLayoutX(21.0);
+        phonel.setLayoutY(209.0);
+        phonel.setText("Phone");
 
-        idtxtfield.setId("txtid");
-        idtxtfield.setLayoutX(91.0);
-        idtxtfield.setLayoutY(26.0);
+        lnametxtfield.setId("txtid");
+        lnametxtfield.setLayoutX(91.0);
+        lnametxtfield.setLayoutY(26.0);
 
         fnametxtfield.setId("fnameid");
         fnametxtfield.setLayoutX(91.0);
         fnametxtfield.setLayoutY(56.0);
 
-        mnametxtfield.setId("mnameid");
-        mnametxtfield.setLayoutX(91.0);
-        mnametxtfield.setLayoutY(99.0);
+        idtxtfield.setId("mnameid");
+        idtxtfield.setLayoutX(91.0);
+        idtxtfield.setLayoutY(99.0);
 
-        lnametxtfield.setId("lnameid");
-        lnametxtfield.setLayoutX(91.0);
-        lnametxtfield.setLayoutY(132.0);
-
-        emailtxtfield.setId("emailid");
+        emailtxtfield.setId("lnameid");
         emailtxtfield.setLayoutX(91.0);
-        emailtxtfield.setLayoutY(168.0);
+        emailtxtfield.setLayoutY(132.0);
 
-        phonetxtfield.setId("phoneid");
+        phonetxtfield.setId("emailid");
         phonetxtfield.setLayoutX(91.0);
-        phonetxtfield.setLayoutY(205.0);
+        phonetxtfield.setLayoutY(168.0);
+
+        mnametxtfield.setId("phoneid");
+        mnametxtfield.setLayoutX(91.0);
+        mnametxtfield.setLayoutY(205.0);
 
         anchorPane0.setMinHeight(0.0);
         anchorPane0.setMinWidth(0.0);
         anchorPane0.setPrefHeight(100.0);
         anchorPane0.setPrefWidth(160.0);
 
-        newbtn.setId("newid");
-        newbtn.setLayoutX(85.0);
-        newbtn.setLayoutY(14.0);
-        newbtn.setMnemonicParsing(false);
-        newbtn.setText("New");
+        idbutton.setId("newid");
+        idbutton.setLayoutX(85.0);
+        idbutton.setLayoutY(14.0);
+        idbutton.setMnemonicParsing(false);
+        idbutton.setText("New");
 
-        updatebtn.setId("updateid");
-        updatebtn.setLayoutX(156.0);
-        updatebtn.setLayoutY(14.0);
-        updatebtn.setMnemonicParsing(false);
-        updatebtn.setText("Update");
+        updatebutton.setId("updateid");
+        updatebutton.setLayoutX(156.0);
+        updatebutton.setLayoutY(14.0);
+        updatebutton.setMnemonicParsing(false);
+        updatebutton.setText("Update");
 
-        deletebtn.setId("deleteid");
-        deletebtn.setLayoutX(230.0);
-        deletebtn.setLayoutY(14.0);
-        deletebtn.setMnemonicParsing(false);
-        deletebtn.setText("Delete");
+        deletebutton.setId("deleteid");
+        deletebutton.setLayoutX(230.0);
+        deletebutton.setLayoutY(14.0);
+        deletebutton.setMnemonicParsing(false);
+        deletebutton.setText("Delete");
 
-        firstbtn.setId("firstid");
-        firstbtn.setLayoutX(303.0);
-        firstbtn.setLayoutY(14.0);
-        firstbtn.setMnemonicParsing(false);
-        firstbtn.setText("First");
+        firstbutton.setId("firstid");
+        firstbutton.setLayoutX(303.0);
+        firstbutton.setLayoutY(14.0);
+        firstbutton.setMnemonicParsing(false);
+        firstbutton.setText("First");
 
-        lastbtn.setId("lastid");
-        lastbtn.setLayoutX(363.0);
-        lastbtn.setLayoutY(14.0);
-        lastbtn.setMnemonicParsing(false);
-        lastbtn.setText("Last");
+        lastbutton.setId("lastid");
+        lastbutton.setLayoutX(363.0);
+        lastbutton.setLayoutY(14.0);
+        lastbutton.setMnemonicParsing(false);
+        lastbutton.setText("Last");
 
-        clearbtn.setId("clearid");
-        clearbtn.setLayoutX(428.0);
-        clearbtn.setLayoutY(14.0);
-        clearbtn.setMnemonicParsing(false);
-        clearbtn.setText("Clear");
+        clearbutton.setId("clearid");
+        clearbutton.setLayoutX(419.0);
+        clearbutton.setLayoutY(14.0);
+        clearbutton.setMnemonicParsing(false);
+        clearbutton.setText("Clear");
 
-        anchorPane.getChildren().add(idlabel);
-        anchorPane.getChildren().add(fnamelabel);
-        anchorPane.getChildren().add(mnamelabel);
-        anchorPane.getChildren().add(lnamelabel);
-        anchorPane.getChildren().add(emaillabel);
-        anchorPane.getChildren().add(phonelabel);
-        anchorPane.getChildren().add(idtxtfield);
-        anchorPane.getChildren().add(fnametxtfield);
-        anchorPane.getChildren().add(mnametxtfield);
+        nextbutton.setId("nextbtn");
+        nextbutton.setLayoutX(480.0);
+        nextbutton.setLayoutY(14.0);
+        nextbutton.setMnemonicParsing(false);
+        nextbutton.setText("next");
+
+        previousbutton.setId("previousbtn");
+        previousbutton.setLayoutX(532.0);
+        previousbutton.setLayoutY(14.0);
+        previousbutton.setMnemonicParsing(false);
+        previousbutton.setText("previous");
+
+        anchorPane.getChildren().add(idl);
+        anchorPane.getChildren().add(fnamel);
+        anchorPane.getChildren().add(mnamel);
+        anchorPane.getChildren().add(lnamel);
+        anchorPane.getChildren().add(emaill);
+        anchorPane.getChildren().add(phonel);
         anchorPane.getChildren().add(lnametxtfield);
+        anchorPane.getChildren().add(fnametxtfield);
+        anchorPane.getChildren().add(idtxtfield);
         anchorPane.getChildren().add(emailtxtfield);
         anchorPane.getChildren().add(phonetxtfield);
+        anchorPane.getChildren().add(mnametxtfield);
         getItems().add(anchorPane);
-        anchorPane0.getChildren().add(newbtn);
-        anchorPane0.getChildren().add(updatebtn);
-        anchorPane0.getChildren().add(deletebtn);
-        anchorPane0.getChildren().add(firstbtn);
-        anchorPane0.getChildren().add(lastbtn);
-        anchorPane0.getChildren().add(clearbtn);
+        anchorPane0.getChildren().add(idbutton);
+        anchorPane0.getChildren().add(updatebutton);
+        anchorPane0.getChildren().add(deletebutton);
+        anchorPane0.getChildren().add(firstbutton);
+        anchorPane0.getChildren().add(lastbutton);
+        anchorPane0.getChildren().add(clearbutton);
+        anchorPane0.getChildren().add(nextbutton);
+        anchorPane0.getChildren().add(previousbutton);
         getItems().add(anchorPane0);
 
     }

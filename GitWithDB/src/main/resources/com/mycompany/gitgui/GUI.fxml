@@ -8,7 +8,7 @@
 
 <SplitPane dividerPositions="0.8165829145728644" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="598.0">
+    <AnchorPane id="previousbtn" minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="598.0">
          <children>
             <Label layoutX="29.0" layoutY="30.0" text="ID" />
             <Label layoutX="21.0" layoutY="68.0" text="First Name" />
@@ -30,7 +30,9 @@
             <Button id="deleteid" layoutX="230.0" layoutY="14.0" mnemonicParsing="false" text="Delete" />
             <Button id="firstid" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" text="First" />
             <Button id="lastid" layoutX="363.0" layoutY="14.0" mnemonicParsing="false" text="Last" />
-            <Button id="clearid" layoutX="428.0" layoutY="14.0" mnemonicParsing="false" text="Clear" />
+            <Button id="clearid" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" text="Clear" />
+            <Button id="nextbtn" layoutX="480.0" layoutY="14.0" mnemonicParsing="false" text="next" />
+            <Button id="previousbtn" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" text="previous" />
          </children></AnchorPane>
   </items>
 </SplitPane>
